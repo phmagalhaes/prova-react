@@ -1,0 +1,113 @@
+/* cabeçalho */
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--azulEscuro);
+}
+/* titulo do cabeçalho */
+header .title{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+/* navegação */
+header .menu{
+    display: none;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+ul li .link{
+    background-color: var(--roxo);
+    padding: 10px 20px;
+    transition: all 400ms ease;
+    color: white;
+}
+ul li .link:hover{
+    background-color: var(--amarelo);
+    color: var(--azulEscuro);
+}
+
+
+/* rodape */
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--azulEscuro);
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: calc(100% - 84px);
+}
+
+@media (max-width:600px) {
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    header ul{
+        display: none;
+    }
+    header .menu{
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: var(--amarelo);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--roxo);
+        cursor: pointer;
+    }
+    .menu .links{
+        position: absolute;
+        background-color: var(--amarelo);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        top: 100%;
+        right: 0;
+        text-align: end;
+        transition: all 300ms ease;
+    }
+    .links .linkMenu{
+        width: 150px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .hidden{
+        opacity: 0;
+        display: none;
+    }
+    .active{
+        opacity: 1;
+        display: block;
+    }
+    .menu p{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

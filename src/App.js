@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Dificuldades from './pages/Dificuldades';
+import Enigmas from './pages/Enigmas';
+import Enigma from './pages/Enigma';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/928_module01/front/' element={<Home />} />
+        <Route path='/928_module01/front/dificuldades/' element={<Dificuldades />} />
+        <Route path='/928_module01/front/enigmas/' element={<Enigmas />} />
+        <Route path='/928_module01/front/enigmas/show/' element={<Enigma />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

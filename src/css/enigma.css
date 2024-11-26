@@ -1,0 +1,99 @@
+.dificuldadesPage {
+  min-height: 100vh;
+}
+
+/* conteudo principal */
+main {
+  padding: 40px 30px;
+}
+
+/* section enigma */
+.enigma .title {
+  font-size: 25px;
+  color: var(--roxo);
+}
+.enigma .contexto {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* dados do enigma */
+.enigma .dados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px 0;
+}
+.dados .solucao,
+.dados .img {
+  width: 30%;
+  height: 350px;
+  margin: 0 5px;
+}
+.img {
+  border: 5px solid gray;
+  border-radius: 10px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: gray;
+}
+/* solucao do enigma */
+.solucao {
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: all 500ms ease;
+}
+.solucao .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--roxo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+.back {
+  z-index: 2;
+  background-color: var(--roxo);
+
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  flex-direction: column;
+}
+.back .subtitle {
+  font-weight: 400;
+  font-size: 15px;
+}
+.front {
+  background-color: var(--amarelo);
+  z-index: 1;
+  transform: rotateY(180deg);
+  color: var(--roxo);
+  text-align: center;
+}
+.solucao:active {
+  transform: rotateY(180deg);
+}
+
+
+/* section links */
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.links .link{
+    font-size: 18px;
+    color: var(--roxo);
+}

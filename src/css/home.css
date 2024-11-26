@@ -1,0 +1,67 @@
+.homePage{
+    min-height: 100vh;
+}
+
+/* conteudo principal */
+main{
+    padding: 40px 30px;
+    margin-top: 0px;
+}
+
+/* section intrucoes */
+.instrucoes{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.instrucoes .title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* section cards */
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;    
+    gap: 20px;
+}
+.card{
+    width: 250px;
+    padding: 30px 20px;
+    background-color: var(--roxo);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    transition: all 400ms ease;
+}
+.card p{
+    margin-top: 15px;
+    font-size: 15px;
+}
+.card .title{
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.card:hover{
+    background-color: var(--amarelo);
+    color: var(--roxo);
+    cursor: pointer;
+}
+#card1:hover ~ #card2, #card1:hover ~ #card3, #card1:hover ~ #card4{
+    filter: grayscale(1) blur(3px);
+}
+#card2:hover ~ #card1, #card2:hover ~ #card3, #card2:hover ~ #card4{
+    filter: grayscale(1) blur(3px);
+}
+#card3:hover ~ #card2, #card3:hover ~ #card1, #card3:hover ~ #card4{
+    filter: grayscale(1) blur(3px);
+}
+#card4:hover ~ #card2, #card4:hover ~ #card3, #card4:hover ~ #card1{
+    filter: grayscale(1) blur(3px);
+}
